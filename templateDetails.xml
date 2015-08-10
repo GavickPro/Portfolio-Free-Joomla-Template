@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 3.4//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/3.4/template-install.dtd">
+<extension version="3.4" type="template" client="site">
+	<name>gk_portfolio</name>
+	<version>1.0.0</version>
+	<creationDate>29/07/2015</creationDate>
+	<author>GavickPro</author>
+	<authorEmail>info@gavick.com</authorEmail>
+	<copyright>Copyright (C) 2015 GavickPro. All rights reserved.</copyright>
+	<description>TPL_GK_PORTFOLIO_XML_DESCRIPTION</description>
+	
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>less</folder>
+	</files>
+
+	<positions>
+		<position>search</position>
+		<position>breadcrumb</position>
+		<position>top</position>
+		<position>bottom</position>
+		<position>copyrights</position>
+		<position>debug</position>
+		<!-- menus -->
+		<position>main-menu</position>
+		<position>top-menu</position>
+		<position>social-menu</position>
+	</positions>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_gk_portfolio.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="siteTitle"  type="text" default=""
+					label="JGLOBAL_TITLE"
+					description="JFIELD_ALT_PAGE_TITLE_LABEL"
+					filter="string" />
+
+				<field name="siteDescription"  type="text" default=""
+					label="JGLOBAL_DESCRIPTION"
+					description="JGLOBAL_SUBHEADING_DESC"
+					filter="string" />
+
+				<field name="logoFile" class="" type="media" default=""
+					label="TPL_GK_PORTFOLIO_LOGO_LABEL"
+					description="TPL_GK_PORTFOLIO_LOGO_DESC" />
+
+				<field name="primaryColor" class="" type="color" default="#5cc1a9"
+					label="TPL_GK_PORTFOLIO_PRIMARY_COLOR_LABEL"
+					description="TPL_GK_PORTFOLIO_PRIMARY_COLOR_DESC" />
+
+				<field name="bgColor" class="" type="color" default="#f1f1f1"
+					label="TPL_GK_PORTFOLIO_BG_COLOR_LABEL"
+					description="TPL_GK_PORTFOLIO_BG_COLOR_DESC" />
+
+				<field name="bgImage" class="" type="media" default=""
+					label="TPL_GK_PORTFOLIO_BG_IMAGE_LABEL"
+					description="TPL_GK_PORTFOLIO_BG_IMAGE_DESC" />
+
+				<field name="bgRepeat"
+					type="list"
+					default="repeat"
+					label="TPL_GK_PORTFOLIO_BG_REPEAT_LABEL"
+					description="TPL_GK_PORTFOLIO_BG_REPEAT_DESC"
+				>
+					<option value="repeat">repeat</option>
+					<option value="no-repeat">no-repeat</option>
+					<option value="repeat-x">repeat-x</option>
+					<option value="repeat-y">repeat-y</option>
+				</field>
+
+				<field name="bgPosition" type="text" default="center center"
+					label="TPL_GK_PORTFOLIO_BG_POSITION_LABEL"
+					description="TPL_GK_PORTFOLIO_BG_POSITION_DESC"
+					filter="string" />
+			</fieldset>
+
+			<fieldset name="fonts">
+				<field name="wordBreak"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_GK_PORTFOLIO_WORD_BREAK_LABEL"
+					description="TPL_GK_PORTFOLIO_WORD_BREAK_DESC"
+				>
+					<option value="1">TPL_GK_PORTFOLIO_ENABLED</option>
+					<option value="0">TPL_GK_PORTFOLIO_DISABLED</option>
+				</field>
+
+				<field name="fontHeader"
+					type="list"
+					default="google"
+					label="TPL_GK_PORTFOLIO_FONT_HEADER_LABEL"
+					description="TPL_GK_PORTFOLIO_FONT_HEADER_DESC"
+				>
+					<option value="google">Google Font</option>
+					<option value="Verdana,sans-serif">Verdana</option>
+					<option value="Georgia,serif">Georgia</option>
+					<option value="Arial,sans-serif">Arial</option>
+					<option value="Impact,sans-serif">Impact</option>
+					<option value="Tahoma,sans-serif">Tahoma</option>
+					<option value="Times,serif">Times New Roman</option>
+					<option value="'Courier New',monotype">Courier New</option>
+					<option value="'Helvetica',sans-serif">Helvetica</option>
+				</field>
+
+				<field name="googleFontHeader"  type="text" default="Open+Sans:700"
+					label="TPL_GK_PORTFOLIO_GOOGLE_FONT_HEADER_LABEL"
+					description="TPL_GK_PORTFOLIO_GOOGLE_FONT_HEADER_DESC"
+					filter="string" />
+
+				<field name="fontBody"
+					type="list"
+					default="google"
+					label="TPL_GK_PORTFOLIO_FONT_BODY_LABEL"
+					description="TPL_GK_PORTFOLIO_FONT_BODY_DESC"
+				>
+					<option value="google">Google Font</option>
+					<option value="Verdana,sans-serif">Verdana</option>
+					<option value="Georgia,serif">Georgia</option>
+					<option value="Arial,sans-serif">Arial</option>
+					<option value="Impact,sans-serif">Impact</option>
+					<option value="Tahoma,sans-serif">Tahoma</option>
+					<option value="Times,serif">Times New Roman</option>
+					<option value="'Courier New',monotype">Courier New</option>
+					<option value="'Helvetica',sans-serif">Helvetica</option>
+				</field>
+
+				<field name="googleFontBody"  type="text" default="Open+Sans:400"
+					label="TPL_GK_PORTFOLIO_GOOGLE_FONT_BODY_LABEL"
+					description="TPL_GK_PORTFOLIO_GOOGLE_FONT_BODY_DESC"
+					filter="string" />
+
+				<field name="fontOther"
+					type="list"
+					default="Arial,sans-serif"
+					label="TPL_GK_PORTFOLIO_FONT_OTHER_LABEL"
+					description="TPL_GK_PORTFOLIO_FONT_OTHER_DESC"
+				>
+					<option value="google">Google Font</option>
+					<option value="Verdana,sans-serif">Verdana</option>
+					<option value="Georgia,serif">Georgia</option>
+					<option value="Arial,sans-serif">Arial</option>
+					<option value="Impact,sans-serif">Impact</option>
+					<option value="Tahoma,sans-serif">Tahoma</option>
+					<option value="Times,serif">Times New Roman</option>
+					<option value="'Courier New',monotype">Courier New</option>
+					<option value="'Helvetica',sans-serif">Helvetica</option>
+				</field>
+
+				<field name="googleFontOther"  type="text" default="Open+Sans:300"
+					label="TPL_GK_PORTFOLIO_GOOGLE_FONT_OTHER_LABEL"
+					description="TPL_GK_PORTFOLIO_GOOGLE_FONT_OTHER_DESC"
+					filter="string" />
+			</fieldset>
+
+			<fieldset name="layout_and_features">
+				<field name="topCols"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="2"
+					label="TPL_GK_PORTFOLIO_TOP_COLS_LABEL"
+					description="TPL_GK_PORTFOLIO_TOP_COLS_DESC"
+				>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</field>
+
+				<field name="bottomCols"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="2"
+					label="TPL_GK_PORTFOLIO_BOTTOM_COLS_LABEL"
+					description="TPL_GK_PORTFOLIO_BOTTOM_COLS_DESC"
+				>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</field>
+
+				<field name="portfolioWidth"  type="text" default="1240"
+					label="TPL_GK_PORTFOLIO_PORTFOLIO_WIDTH_LABEL"
+					description="TPL_GK_PORTFOLIO_PORTFOLIO_WIDTH_DESC"
+					filter="int" />
+
+				<field name="contentWidth"  type="text" default="700"
+					label="TPL_GK_PORTFOLIO_CONTENT_WIDTH_LABEL"
+					description="TPL_GK_PORTFOLIO_CONTENT_WIDTH_DESC"
+					filter="int" />
+
+				<field name="clickablePreview"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_GK_PORTFOLIO_CLICKABLE_PREVIEW_LABEL"
+					description="TPL_GK_PORTFOLIO_CLICKABLE_PREVIEW_DESC"
+				>
+					<option value="1">TPL_GK_PORTFOLIO_ENABLED</option>
+					<option value="0">TPL_GK_PORTFOLIO_DISABLED</option>
+				</field>
+
+				<field name="showPreview"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_GK_PORTFOLIO_SHOW_PREVIEW_LABEL"
+					description="TPL_GK_PORTFOLIO_SHOW_PREVIEW_DESC"
+				>
+					<option value="1">TPL_GK_PORTFOLIO_ENABLED</option>
+					<option value="0">TPL_GK_PORTFOLIO_DISABLED</option>
+				</field>
+
+				<field name="portfolioInfo"
+					type="list"
+					default="tags"
+					label="TPL_GK_PORTFOLIO_PORTFOLIO_INFO_LABEL"
+					description="TPL_GK_PORTFOLIO_PORTFOLIO_INFO_DESC"
+				>
+					<option value="none">TPL_GK_PORTFOLIO_NONE</option>
+					<option value="tags">TPL_GK_PORTFOLIO_TAGS</option>
+					<option value="categories">TPL_GK_PORTFOLIO_CATEGORIES</option>
+					<option value="title">TPL_GK_PORTFOLIO_TITLE</option>
+					<option value="date">TPL_GK_PORTFOLIO_DATE</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="effects">
+				<field name="portfolioAnimation"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_GK_PORTFOLIO_PORTFOLIO_ANIMATION_LABEL"
+					description="TPL_GK_PORTFOLIO_PORTFOLIO_ANIMATION_DESC"
+				>
+					<option value="1">TPL_GK_PORTFOLIO_ENABLED</option>
+					<option value="0">TPL_GK_PORTFOLIO_DISABLED</option>
+				</field>
+
+				<field name="portfolioAnimationType"
+					type="list"
+					default="flip"
+					label="TPL_GK_PORTFOLIO_PORTFOLIO_ANIMATION_TYPE_LABEL"
+					description="TPL_GK_PORTFOLIO_PORTFOLIO_ANIMATION_TYPE_DESC"
+				>
+					<option value="flip">TPL_GK_PORTFOLIO_FLIP</option>
+					<option value="flip-center">TPL_GK_PORTFOLIO_CENTER_FLIP</option>
+					<option value="scale-bottom">TPL_GK_PORTFOLIO_SCALE_BOTTOM</option>
+					<option value="scale-center">TPL_GK_PORTFOLIO_SCALE_CENTER</option>
+					<option value="scale-top">TPL_GK_PORTFOLIO_SCALE_TOP</option>
+					<option value="opacity">TPL_GK_PORTFOLIO_OPACITY</option>
+				</field>
+
+				<field name="portfolioAnimationSpeed"
+					type="list"
+					default="normal"
+					label="TPL_GK_PORTFOLIO_PORTFOLIO_ANIMATION_SPEED_LABEL"
+					description="TPL_GK_PORTFOLIO_PORTFOLIO_ANIMATION_SPEED_DESC"
+				>
+					<option value="fast">TPL_GK_PORTFOLIO_FAST</option>
+					<option value="normal">TPL_GK_PORTFOLIO_NORMAL</option>
+					<option value="slow">TPL_GK_PORTFOLIO_SLOW</option>
+				</field>
+
+				<field name="portfolioPrevieAnimationType"
+					type="list"
+					default="slide-up"
+					label="TPL_GK_PORTFOLIO_PREVIEW_ANIMATION_TYPE_LABEL"
+					description="TPL_GK_PORTFOLIO_PREVIEW_ANIMATION_TYPE_DESC"
+				>
+					<option value="slide-up">TPL_GK_PORTFOLIO_SLIDE_UP</option>
+					<option value="slide-down">TPL_GK_PORTFOLIO_SLIDE_DOWN</option>
+					<option value="slide-left">TPL_GK_PORTFOLIO_SLIDE_LEFT</option>
+					<option value="slide-right">TPL_GK_PORTFOLIO_SLIDE_RIGHT</option>
+					<option value="opacity">TPL_GK_PORTFOLIO_SLIDE_OPACITY</option>
+					<option value="scale">TPL_GK_PORTFOLIO_SLIDE_SCALE</option>
+				</field>
+
+				<field name="portfolioPreviewAnimationSpeed"
+					type="list"
+					default="fast"
+					label="TPL_GK_PORTFOLIO_PORTFOLIO_PREVIEW_ANIMATION_SPEED_LABEL"
+					description="TPL_GK_PORTFOLIO_PORTFOLIO_PREVIEW_ANIMATION_SPEED_DESC"
+				>
+					<option value="fast">TPL_GK_PORTFOLIO_FAST</option>
+					<option value="normal">TPL_GK_PORTFOLIO_NORMAL</option>
+					<option value="slow">TPL_GK_PORTFOLIO_SLOW</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="itemHeight"  type="text" default="418"
+					label="TPL_GK_PORTFOLIO_ITEM_HEIGHT_LABEL"
+					description="TPL_GK_PORTFOLIO_ITEM_HEIGHT_DESC"
+					filter="int" />
+
+				<field name="itemMobileHeight"  type="text" default="336"
+					label="TPL_GK_PORTFOLIO_ITEM_MOBILE_HEIGHT_LABEL"
+					description="TPL_GK_PORTFOLIO_ITEM_MOBILE_HEIGHT_DESC"
+					filter="int" />
+
+				<field name="itemPadding"  type="text" default="56px 36px 36px 36px"
+					label="TPL_GK_PORTFOLIO_ITEM_PADDING_LABEL"
+					description="TPL_GK_PORTFOLIO_ITEM_PADDING_DESC"
+					filter="string" />
+
+				<field name="itemMobilePadding"  type="text" default="20px 16px 36px 16px"
+					label="TPL_GK_PORTFOLIO_ITEM_MOBILE_PADDING_LABEL"
+					description="TPL_GK_PORTFOLIO_ITEM_MOBILE_PADDING_DESC"
+					filter="string" />
+
+				<field name="excerptWidth"  type="text" default="16"
+					label="TPL_GK_PORTFOLIO_EXCERPT_WIDTH_LABEL"
+					description="TPL_GK_PORTFOLIO_EXCERPT_WIDTH_DESC"
+					filter="int" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

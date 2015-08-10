@@ -1,0 +1,252 @@
+// RWD
+
+@media (max-width: 1599px) {
+	.site {
+		padding: 40px 10px;
+	}
+}
+
+@media (max-width: 1040px) {
+	.item__info {
+		padding: 0 30px 0 48px;
+
+		&:before {
+			left: -5px;
+		}
+	}
+}
+
+@media (max-width: 960px) {
+	.item[data-cols="1"] {
+		width: 100%;
+	}
+
+	.item[data-cols="2"],
+	.item[data-cols="3"],
+	.item[data-cols="4"],
+	.item[data-cols="5"],
+	.item[data-cols="6"],
+	.item[data-cols="7"],
+	.item[data-cols="8"] {
+		width: 50%;
+	}
+}
+
+@media (max-width: 720px) {
+	.navigation {
+		padding: 0 0 30px 0;
+		position: relative;
+		text-align: center;
+
+		&.opened .nav {
+			float: none;
+			margin: 20px auto;
+			position: static;
+		}
+	}
+	
+	.navigation:before {
+		border: 1px solid @textColor;
+		border-radius: 2px;
+		content: "≡ Menu";
+		cursor: pointer;
+		font-family: Arial, sans-serif;
+		font-size: 1.6rem;
+		font-weight: bold;
+		padding: 8px 16px; 
+	}
+	
+	body .navigation .nav {
+		background: @whiteColor;
+		border: 1px solid @grayColor;
+		left: -9999px;
+		position: absolute;
+		width: 300px;
+
+		li {
+			border-top: 1px solid @grayColor;
+			display: block!important;
+			height: auto;
+			min-height: 40px;
+			line-height: 41px;
+			text-align: center;
+			width: 100%;
+
+			&.active > a {
+				border-radius: 0;
+				color: @whiteColor!important;
+			}
+
+			a {
+				display: block!important;
+				line-height: 39px!important;
+				min-height: 40px;
+				text-align: center;
+				width: 100%;
+			}
+		}
+
+		&-child ,
+		&-child .nav-child {
+			background: @lightgrayColor;
+			border: none;
+			border-radius: 0;
+			.box-shadow(~"none")!important;
+			display: block;
+			left: auto;
+			margin: 0!important;
+			padding: 0!important;
+			opacity: 1!important;
+			position: static!important;
+			.transform(~"translateY(0px) scale(1)")!important;
+			width: 100%!important;
+
+			& > li {
+				display: block;
+				margin: 0;
+
+				& > a {
+					display: block;
+					margin: 0;
+					width: 100%!important;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.navigation:before {
+		font-size: 1.6rem;
+	}
+}
+
+/* Fix for the mobile menu animation */
+@media (min-width: 721px) {
+	.navigation > .nav {
+		height: auto!important;
+	}
+}
+
+@media (max-width: 600px) {
+	h1 { font-size: 2.4rem; }
+	h2 { font-size: 2.0rem; }
+	h3 { font-size: 1.8rem; }
+	h4 { font-size: 1.6rem; }
+	h5 { font-size: 1.4rem; }
+	h6 { font-size: 1.3rem; }
+
+	pre {
+		font-size: 1.1rem;
+		padding: 10px;
+	}
+
+	.item[data-cols="1"],
+	.item[data-cols="2"],
+	.item[data-cols="3"],
+	.item[data-cols="4"],
+	.item[data-cols="5"],
+	.item[data-cols="6"],
+	.item[data-cols="7"],
+	.item[data-cols="8"] {
+		width: 100%;
+	}
+	.header__search,
+	.header__topmenu {
+		display: none;
+	}
+
+	.pager > .previous, 
+	.pager > .next {
+		position: absolute;
+		top: 90px;
+	}
+
+	.post__header {
+		font-size: 2.4rem;
+    	padding: 30px 20px 0 20px;
+	}
+
+	.post__info {
+    	padding: 0 10px 12px 10px;
+	}
+
+	.subpage.component, 
+	.subpage.archive, 
+	.subpage.login, 
+	.subpage.logout, 
+	.subpage.newsfeed, 
+	.subpage.newsfeeds, 
+	.subpage.search, 
+	.subpage.wrapper {
+    	padding: 20px 20px;
+	}
+
+	.post__content {
+    	padding: 0 20px;
+
+    	blockquote {
+			margin: 15px 0;
+			padding: 10px 20px;
+    	}
+	}
+
+	.social__buttons {
+    	margin: 20px 0;
+	}
+
+	.article-index {
+    	margin: 20px 0;
+    	width: 100%;
+	}
+
+	.contact__form_right, 
+	.tag_category__form_right, 
+	.newsfeed__form_right,
+	.contact__form_left, 
+	.tag_category__form_left, 
+	.newsfeed__form_left,
+	.search__input,
+	.search__btn,
+	.search__fieldset label,
+	.filter-date > div > button,
+	.contact_single__select_form,
+	.contact_single__category,
+	.contact_single__thumbnail {
+		width: 100%;
+	}
+
+	.contact_single__thumbnail {
+		margin: 0 0 20px 0;
+		text-align: center;
+	}
+
+	.contact_single__thumbnail > img {
+		float: none;
+	}
+
+	.search__fieldset label {
+		display: block;
+	}
+
+	.search__btn,
+	.filter-date > div > button {
+		margin-top: 10px;
+	}
+
+	.contact__header_title, 
+	.tag_category__header_title, 
+	.newsfeed__header_title {
+		font-size: 1.6rem;
+	}
+
+	.component.blog-featured table,
+	.component.blog-featured table td,
+	.component.blog-featured table th,
+	.component.blog-featured table tr,
+	.component.blog-featured table thead,
+	.component.blog-featured table tbody {
+		display: block;
+		width: 100%;
+	}
+}

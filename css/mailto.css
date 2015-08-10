@@ -1,0 +1,70 @@
+/*
+	Basic HTML elements
+ */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: #ffffff;
+  color: #777777;
+  font-family: Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+a {
+  color: #363636;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+a.inverse,
+a:active,
+a:focus,
+a:hover {
+  color: #777777;
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #363636;
+  font-weight: 300;
+  margin: 0;
+}
+h2 {
+  font-size: 2rem;
+}
+label {
+  font-size: 1.2rem;
+}
+input {
+  height: 32px;
+  line-height: 32px;
+  width: 100%;
+}
+button {
+  background: #363636;
+  border: none;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+button:first-child {
+  float: right;
+}

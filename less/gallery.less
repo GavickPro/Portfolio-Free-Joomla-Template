@@ -1,0 +1,160 @@
+/*
+	Gallery
+ */
+.gk-photo {
+	clear: both;
+	padding: 35px 0;
+	
+	&:after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+
+	& > a {
+		display: block;
+		float: left;
+		max-width: 45%;	
+	}
+
+	img {
+		float: left;
+		max-width: 100%;
+	}
+	
+	figcaption {
+		float: right;
+		width: 45%;
+	}
+	
+	h3 {
+		font-style: normal;
+		font-size: 1.8rem;
+		margin: 0 0 20px 0;
+		padding: 0;
+		text-align: left;	
+	}
+	
+	p {
+		font-size: 1.6rem;
+		font-style: normal;
+		margin: 0;
+		text-align: left;
+	}
+
+	&-right > a,
+	&-right img {
+		float: right;
+	}
+	
+	&-right figcaption {
+		float: left;
+	}
+	
+	&-center > a,
+	&-center img {
+		display: block;
+		max-width: 100%;
+		width: 100%;
+	}
+	
+	&-center figcaption {
+		clear: both;
+		float: none;
+		margin: 0 auto;
+		padding: 20px 0 0 0;
+		width: 70%;
+	}
+	
+	&-center p,
+	&-center h3 {
+		text-align: center;
+	}
+
+	&-overlay {
+		background: rgba(0, 0, 0, .90) url('../images/gallery_preloader.gif') no-repeat center center;
+		display: none;
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		position: fixed;
+		top: 0;
+		.transform(~"scale(.5)");
+		.transition(~"all .3s ease-out");
+		width: 100%;
+		z-index: 10000000;
+
+		&.active {
+			display: block;
+			opacity: 1;
+			.transform(~"scale(1)");
+		}
+
+		img {
+			display: block;
+			height: auto;
+			left: 50%;
+			max-height: 95%;
+			max-width: 95%;
+			opacity: 1;
+			position: fixed;
+			top: 50%;
+			.transition(~"all .3s ease-out");
+			.transform(~"translateX(-50%) translateY(-50%) scale(1)");
+			width: auto;
+
+			&.loading {
+				opacity: 0;
+				.transform(~"translateX(-50%) translateY(-50%) scale(.8)");
+			}
+		}
+
+		&-prev,
+		&-next {
+			border: 2px solid @whiteColor;
+			border-right: none;
+			border-bottom: none;
+			cursor: pointer;
+			display: block;
+			left: 100px;
+			height: 60px;
+			margin-top: -30px;
+			opacity: 0;
+			position: fixed;
+			top: 50%;
+			.transition(~"all .3s ease-out");
+			.transform(~"rotate(-45deg)");
+			width: 60px;
+
+			&:active,
+			&:focus,
+			&:hover {
+				border-color: #d27244;
+			}
+		}
+
+		&-prev.active {
+			left: 50px;
+			opacity: 1;
+		}
+		&-next.active {
+			opacity: 1;
+			right: 50px;
+		}
+
+		&-next {
+			left: auto;
+			right: 100px;
+			.transform(~"rotate(135deg)");	
+		}
+
+		&::selection,
+		img::selection {
+			background: transparent;
+		}
+		&::-moz-selection,
+		img::-moz-selection {
+			background: transparent;
+		}
+	}
+}

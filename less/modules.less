@@ -1,0 +1,224 @@
+/*
+	Modules
+ */
+.moduletable {
+	float: left;
+	margin: 0 0 20px 0;
+	padding: 0 25px;
+	text-align: left;
+	width: 100%;
+
+	div[data-mod-num="2"] & {
+		width: 50%;
+
+		&:nth-child(2n+1) {
+			clear: both;
+		}
+	}
+
+	div[data-mod-num="3"] & {
+		width: 33.333333%;
+
+		&:nth-child(3n+1) {
+			clear: both;
+		}
+	}
+
+	& > h3 {
+		margin: 0;
+		text-align: left;
+	}
+
+	& > ul {
+		font-size: 1.4rem;
+		padding: 0;
+		text-align: left;
+
+		li {
+			border-top: 1px solid @grayColor;
+			list-style-type: none;
+			padding: 5px 0;
+
+			&:first-child {
+				border-top: none;
+			}
+		}
+	}
+}
+
+/*
+	Login
+ */
+.moduletable {
+	#login-form {
+		label {
+			display: block;
+			width: 100%;
+
+			&[for="modlgn-remember"] {
+				float: right;
+				width: auto;
+			}
+		}
+
+		input {
+			width: 100%;
+		}
+
+		.controls {
+			& > div {
+				padding: 0 0 10px 0;
+			}
+		}
+
+		#modlgn-remember {
+			float: right;
+			margin-top: 3px;
+			width: auto;
+		}
+
+		#form-login-remember {
+			margin-top: 20px;
+		}
+
+		#form-login-submit {
+			margin-top: -10px;
+		}
+
+		.userdata {
+			& > ul {
+				margin: 20px 0 0 0;
+				padding: 0;
+				text-align: center;
+
+				li {
+					display: inline-block;
+					list-style-type: none;
+					padding: 0 5px;
+				}
+			}
+		}
+	}
+}
+
+/*
+	Menu
+ */
+.moduletable {
+	.nav {
+		& > li {
+			display: block;
+
+			ul {
+				border-top: 1px solid @grayColor;
+				margin: 10px 0 0 20px;
+				padding: 0;
+			}
+		}
+
+		li {
+			& > a {
+				display: block;
+				.transition(~"all .3s ease-out");
+			}
+
+			&:hover > a {
+				text-indent: 10px;
+			}
+		}
+	}
+}
+
+/*
+	Smart search
+ */
+#mod-finder-searchform {
+	label {
+		display: none;
+	}
+
+	#mod-finder-searchword {
+		border: none;
+		border-bottom: 1px solid @grayColor;
+	    text-indent: 5px;
+	    line-height: 42px;
+	    width: 170px;
+	}
+}
+
+/*
+	Stats module
+ */
+.stats-module {
+	dt {
+		clear: both;
+		float: left;
+		margin: 0;
+		padding: 0 5px 0 0;
+	}
+}
+
+/*
+	Tags - popular
+ */
+
+.moduletable {
+	div[class^="tags"] {
+		ul {
+			margin: 20px 0 10px 0;
+			padding: 0;
+
+			li {
+				background: @lightgrayColor;
+				border: 1px solid @grayColor;
+				border-radius: 2px;
+				display: inline-block;
+				font-size: 1.4rem;
+				list-style-type: none;
+				margin: 5px 3px;
+				padding: 0 5px;
+
+				.tag-count {
+					font-size: 1.2rem;
+					padding: 0 2px;
+				}
+			}
+		}
+	}
+}
+
+/*
+	Breadcrumb
+ */
+.breadcrumb {
+	background: @lightgrayColor;
+	border-bottom: 1px solid @grayColor;
+	border-top: 1px solid @grayColor;
+	margin: 0;
+	padding: 10px 0;
+
+	& > ul {
+		border: none;
+		margin: 0 auto;
+		padding: 0;
+		text-align: center;
+		width: 100%;
+
+		& > li {
+			display: inline-block;
+
+			&:after {
+				content: "/";
+				padding: 0 5px;
+			}
+
+			&:first-child,
+			&:last-child {
+				&:after {
+					content: "";
+					padding: 0;
+				}
+			}
+		}
+	}
+}

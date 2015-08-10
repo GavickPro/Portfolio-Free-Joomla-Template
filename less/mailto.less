@@ -1,0 +1,90 @@
+// Core variables and mixins
+@import "mixins.less";
+
+@textColor: #777;
+@lighttextColor: #999;
+@darkColor: #363636;
+@whiteColor: #fff;
+@focusColor: #fffef4;
+@silverColor: #aaa;
+@lightsilverColor: #ccc;
+@lightgrayColor: #f5f5f5;
+@grayColor: #e5e5e5;
+@blackColor: #000;
+@yellowColor: #fdfbec;
+@inputBorderColor: #d4d0ba;
+
+/*
+	Basic HTML elements
+ */
+
+*,
+*:after,
+*:before {
+	.box-sizing(~"border-box");
+}
+
+html {
+	font-size: 62.5%;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	background: @whiteColor;
+	color: @textColor;
+	font-family: Arial, sans-serif;
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 1.8;
+}
+
+a {
+	color: @darkColor;
+	text-decoration: none;
+	.transition(~"all 0.3s ease-out");
+
+	&.inverse,
+	&:active,
+	&:focus,
+	&:hover { 
+		color: @textColor; 
+	}
+}
+
+img { 
+	max-width: 100%; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { 
+	color: @darkColor;
+	font-weight: 300;
+	margin: 0;
+}
+
+h2 { font-size: 2rem; }
+
+label {
+	font-size: 1.2rem;
+}
+
+input {
+	height: 32px;
+	line-height: 32px;
+	width: 100%;
+}
+
+button {
+	background: @darkColor;
+	border: none;
+	color: @whiteColor;
+	padding: 5px 10px;
+
+	&:first-child {
+		float: right;
+	}
+}

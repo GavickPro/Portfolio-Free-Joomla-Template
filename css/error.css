@@ -1,0 +1,97 @@
+/*
+	Basic HTML elements
+ */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: #f5f5f5;
+  color: #777777;
+  font-family: Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+a.inverse,
+a:active,
+a:focus,
+a:hover {
+  color: #363636;
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #363636;
+  font-weight: 300;
+}
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+h4 {
+  font-size: 2.0rem;
+}
+h5 {
+  font-size: 1.8rem;
+}
+h6 {
+  font-size: 1.6rem;
+}
+p {
+  margin: 1em 0 2em;
+}
+#outline {
+  max-width: 640px;
+  padding: 0;
+  margin: 100px auto;
+}
+#errorboxheader {
+  background: #363636;
+  font-size: 1.6rem;
+  max-width: 640px;
+  padding: 10px 0;
+}
+#errorboxoutline {
+  border: 1px solid #e5e5e5;
+  max-width: 640px;
+}
+#errorboxbody {
+  padding: 20px;
+}
+#errorboxbody p {
+  margin: 0 0 10px 0;
+}
+#techinfo {
+  margin: 0;
+}
+#techinfo p {
+  color: #363636;
+  margin: 0;
+}
