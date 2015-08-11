@@ -112,7 +112,7 @@ require_once('inc/layout.php');
 			</div><!-- .footer__copyrights_module -->
 			<?php endif; ?>	
 			
-			<p class="footer__copyrights_text">Free Joomla Template by <a href="https://www.gavick.com/">GavickPro.com</a></p>
+			<p class="footer__copyrights_text">Free Joomla Template by <a href="https://www.gavick.com">Gavick.com</a></p>
 		</div><!-- .footer__copyrights -->
 	</footer><!-- .footer -->
 
