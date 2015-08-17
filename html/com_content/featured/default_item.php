@@ -49,7 +49,7 @@ require_once(__DIR__ . '/../../../inc/layout.php');
 					<?php echo $this->item->event->beforeDisplayContent; ?> 
 					<?php 
 						$text = $this->item->introtext; 
-						$len = $this->params->get('excerptWidth', 16);
+						$len = $templateParams->get('excerptWidth', 16);
 						echo gkExcerpt($text, $len);
 					?>
 					<?php echo $this->item->event->afterDisplayContent; ?>
