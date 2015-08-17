@@ -24,6 +24,7 @@ $doc->addScript($tplUrl . '/js/template.js');
 $doc->addStyleSheet($tplUrl . '/css/normalize.css');
 $doc->addStyleSheet($tplUrl . '/css/font-awesome.css');
 $doc->addStyleSheet($tplUrl . '/css/template.css');
+$doc->addStyleSheet($tplUrl . '/css/custom.css');
 
 //
 // Load the fonts if necessary
