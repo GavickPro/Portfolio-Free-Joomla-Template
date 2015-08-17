@@ -842,6 +842,9 @@ a[class^="icon-"]:before {
 .item__summary_link:hover {
   color: #aaaaaa;
 }
+.item__summary_link p {
+	margin-bottom: 0;
+}
 .item__info {
   background: #ffffff;
   border-top: 0;
