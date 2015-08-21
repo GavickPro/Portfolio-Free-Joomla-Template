@@ -71,7 +71,6 @@ function gkLogo($params) {
  */
 function gkExcerpt($text, $len, $more = '&hellip;') {
 	$useMore = false;
-	$text = strip_tags($text);
 	$text = explode(' ', $text);
 
 	if(count($text) > $len) {
