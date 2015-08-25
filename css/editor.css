@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext')
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background: #ffffff;
+  color: #777777;
+  font-size: 1.4rem; 
+  font-family: 'Open Sans', sans-serif; 
+  font-weight: 400;
+  line-height: 2;
+  padding: 32px;
+}
+a {
+  color: #5cc1a9;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+a.inverse,
+a:active,
+a:focus,
+a:hover {
+  color: #363636;
+}
+img {
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #363636;
+  font-weight: 300;
+}
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+h4 {
+  font-size: 2.0rem;
+}
+h5 {
+  font-size: 1.8rem;
+}
+h6 {
+  font-size: 1.6rem;
+}
+p {
+  margin: 1em 0 2em;
+}
+iframe {
+  border: none;
+}
+code {
+  background: #f5f5f5;
+  padding: 5px 10px;
+}
+pre {
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+}
+dt {
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+dd {
+  margin-left: 0;
+}
+table {
+  border: 1px solid #e5e5e5;
+  width: 100%;
+}
+th {
+  background: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  padding: 5px 10px;
+  word-break: normal;
+}
+td {
+  border: 1px solid #e5e5e5;
+  padding: 5px 10px;
+}
+fieldset.filters {
+  border: none;
+}
+embed,
+iframe,
+object,
+video {
+  max-width: 100%;
+}
+/* 
+	Form fields, general styles first. 
+*/
+button,
+input,
+textarea {
+  border: 2px solid #d4d0ba;
+  font-family: inherit;
+  padding: 5px;
+}
+input,
+select,
+textarea {
+  border: 1px solid #d4d0ba;
+  border-radius: 2px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #777777;
+  height: 40px;
+  max-width: 100%!important;
+  padding: 0 10px;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  background: #fffef4;
+}
+input {
+  line-height: 40px;
+}
+textarea {
+  height: auto;
+  max-width: 100%!important;
+  padding: 2.4rem;
+}
+fieldset {
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+legend {
+  font-size: 1.2rem;
+  padding: 0 5px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  height: 15px;
+  line-height: 15px;
+  margin: 0 5px 0 0;
+  width: 15px;
+}
+input[type="checkbox"] {
+  height: 14px;
+  line-height: 14px;
+}
+/* Buttons */
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  background: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+button:focus,
+input[type="submit"]:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+  border-color: #34373b;
+  color: #34373b;
+}
+/* 
+	Placeholder text color -- selectors need to be separate to work. 
+*/
+::-webkit-input-placeholder {
+  color: #777777;
+  font-size: 1.4rem;
+}
+:-moz-placeholder {
+  color: #777777;
+  font-size: 1.4rem;
+}
+::-moz-placeholder {
+  color: #777777;
+  font-size: 1.4rem;
+}
+:-ms-input-placeholder {
+  color: #777777;
+  font-size: 1.4rem;
+}
+/* Blockquote */
+blockquote {
+  background: #fdfbec;
+  border-left: 4px solid #5cc1a9;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2;
+  margin: 30px 0;
+  padding: 15px 30px 15px 45px;
+}
+blockquote p {
+  margin: 0;
+}
+blockquote cite,
+blockquote small {
+  display: block;
+  font-size: 1.4rem;
+}
