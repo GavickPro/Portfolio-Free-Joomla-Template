@@ -18,10 +18,8 @@
 		<filename>template_preview.png</filename>
 		<filename>template_thumbnail.png</filename>
 		<folder>css</folder>
-		<folder>fonts</folder>
 		<folder>html</folder>
 		<folder>images</folder>
-		<folder>inc</folder>
 		<folder>js</folder>
 		<folder>language</folder>
 		<folder>less</folder>
@@ -329,6 +327,17 @@
 					label="TPL_GK_PORTFOLIO_EXCERPT_WIDTH_LABEL"
 					description="TPL_GK_PORTFOLIO_EXCERPT_WIDTH_DESC"
 					filter="int" />
+					
+				<field name="excerptStripTags"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_GK_PORTFOLIO_EXCERPT_STRIP_TAGS_LABEL"
+					description="TPL_GK_PORTFOLIO_EXCERPT_STRIP_TAGS_DESC"
+				>
+					<option value="1">TPL_GK_PORTFOLIO_ENABLED</option>
+					<option value="0">TPL_GK_PORTFOLIO_DISABLED</option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>

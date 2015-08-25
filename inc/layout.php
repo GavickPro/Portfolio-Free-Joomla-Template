@@ -70,8 +70,17 @@ function gkLogo($params) {
 	Function used to create an excerpt
  */
 function gkExcerpt($text, $len, $more = '&hellip;') {
+	// Getting params from template
+	$app = JFactory::getApplication();
+	$params = $app->getTemplate(true)->params;
+	
 	$useMore = false;
-	$text = strip_tags($text);
+	
+	// Remove HTML tags from excerpt if option for tags stripping is enabled
+	if($params->get('excerptStripTags', '1') == '1') {
+		$text = strip_tags($text);
+	}
+	
 	$text = explode(' ', $text);
 
 	if(count($text) > $len) {
