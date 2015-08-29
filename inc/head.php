@@ -214,3 +214,6 @@ if($this->params->get('bgImage', '') !== '') {
 }
 
 $doc->addStyleDeclaration($customCSS);
+// Add CSS overrides
+$doc->addStyleDeclaration($this->params->get('customCSS'));
+$doc->addStyleSheet($tplUrl . '/css/override.css');
