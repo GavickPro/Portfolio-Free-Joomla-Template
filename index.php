@@ -13,6 +13,8 @@ defined('_JEXEC') or die;
 $app    = JFactory::getApplication();
 $doc    = JFactory::getDocument();
 $user   = JFactory::getUser();
+$menu 	= $app->getMenu();
+$lang 	= JFactory::getLanguage();
 // Getting params from template
 $params = $app->getTemplate(true)->params;
 
@@ -112,7 +114,12 @@ require_once('inc/layout.php');
 			</div><!-- .footer__copyrights_module -->
 			<?php endif; ?>	
 			
-			<p class="footer__copyrights_text">Free Joomla Template by <a href="https://www.gavick.com">Gavick.com</a></p>
+			<?php if ($menu->getActive() == $menu->getDefault($lang->getTag())) : ?> 
+				<p class="footer__copyrights_text">Free Joomla Template by <a href="https://www.gavick.com">Gavick.com</a></p>
+			<?php else : ?>
+				<p class="footer__copyrights_text">Free Joomla Template by Gavick.com</p>
+			<?php endif; ?>
+
 		</div><!-- .footer__copyrights -->
 	</footer><!-- .footer -->
 
