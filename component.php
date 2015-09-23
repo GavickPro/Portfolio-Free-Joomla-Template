@@ -23,6 +23,10 @@ if(JRequest::getCmd('print') == '1') {
 	$doc->addStyleSheet($tplUrl . '/css/print.css');
 }
 
+if(JRequest::getCmd('option') == 'com_media' || JRequest::getCmd('view') == 'history') {
+	$doc->addStyleSheet($tplUrl . '/css/image-popup.css');
+}
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">

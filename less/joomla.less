@@ -1015,7 +1015,7 @@
 	padding: 8px;
 	position: absolute!important;
 	opacity: 1;
-	z-index: 10;
+	z-index: 100;
 	
 	&-inner {
 		color: @textColor;
@@ -1038,5 +1038,178 @@
 	}
 }
 
+/*
+	Configuration pages
+*/
+.btn-toolbar {
+	overflow: hidden;
+
+	.btn-group {
+		float: left;
+		margin-right: 5px;
+	}
+}
+
+.control-group {
+	padding-bottom: 10px;
+}
+
+.btn-group.radio {
+	label {
+		padding-right: 10px;
+	}
+}
+
+.hr-condensed {
+	display: none;
+}
+
+.chzn-done {
+	display: block!important;
+}
+
+.chzn-container {
+	display: none!important;
+}
+
+.row-fluid > legend {
+	font-size: 2.4rem;
+	padding: 20px 0;
+}
+
+.btn > .icon-remove {
+	&:before {
+		content: "×";
+		font-size: 4rem;
+	}
+}
+
+.minicolors-theme-bootstrap {
+	.minicolors {
+		&-input {
+		    height: 40px;
+		    line-height: 40px;
+		    padding: 0 0 0 40px;
+		    width: 132px;
+		}
+		
+		&-swatch {
+			left: 10px;
+			top: 10px;
+		}
+	}
+}
+
+.input-append,
+.input-prepend {
+	overflow: hidden;
+
+	input,
+	.btn {
+		float: left;
+		margin-right: 5px;
+	}
+	
+	.btn.hasTooltip {
+		padding: 0 5px;
+	}
+}
+
+/*
+	Modalbox fix
+*/
+#sbox-content {
+	height: 100%;
+	
+	& > iframe {
+		max-height: 100%;
+	}
+}
+
+/*
+	Item editor
+*/
+
+.item-page.edit {
+	.nav-tabs {
+		display: none;
+	}
+	
+	#jform_title,
+	#jform_alias {
+		width: 100%;
+	}
+	
+	#editor-xtd-buttons {
+		overflow: hidden;
+		padding: 20px 0 0 0;
+		
+		.btn {
+			padding: 0 5px;
+		}
+	}
+	
+	.toggle-editor.btn-toolbar {
+		margin-top: 20px;
+		padding: 0 5px;
+	}
+	
+	.tab-pane {
+		clear: both;
+		padding: 0 0 30px 0;
+		overflow: hidden;
+	}
+}
+
+#jform_publish_up_img,
+#jform_publish_down_img {
+	padding: 0 10px;
+}
+ 
+.icon-calendar:before {
+	content: "\f073";
+	font-family: FontAwesome;
+}
+
+/*
+	Module edition
+*/
+.btn.jmodedit {
+	border: none;
+
+	&:before {
+		color: @darkColor;
+		content: "\f044";
+		font-family: FontAwesome;
+		font-size: 3.2rem;
+	}
+}
+
+#modules-form {
+	.span12 > legend {
+		font-size: 2.4rem;
+		padding: 20px 0;
+	}
+	
+	hr {
+		display: none;
+	}
+	
+	.label-default {
+		background: @grayColor;
+		border-radius: 5px;
+		padding: 3px 5px;
+	}
+	
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+	
+	input[type="text"],
+	textarea {
+		width: 80%;
+	}
+}
 
 // EOF
