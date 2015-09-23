@@ -255,15 +255,15 @@ function portfolio_is_touch_device() {
 		});	
 		
 		// Fix for the mobile devices
-		/*if($(document.body).hasClass('touch-screen')) {
-			$('.menu-item-has-children').children('a').each(function(i, link) {
+		if($(document.body).hasClass('touch-screen')) {
+			$('.nav .parent').children('a').each(function(i, link) {
 				$(link).click(function(e) {
 					e.preventDefault();
 				});
 			});
 		}
 		
-		$('.menu-item-has-children').children('a').on('touchend', function(e) {
+		$('.nav .parent').children('a').on('touchend', function(e) {
 			e.stopPropagation();
 			e.preventDefault();
 			
@@ -283,7 +283,7 @@ function portfolio_is_touch_device() {
 				$(this).removeAttr('data-time');
 				return true;
 			}
-		});*/
+		});
 
 		// fit videos
 		jQuery(".video-wrapper").fitVids();
