@@ -1,7 +1,8 @@
 /*
 	Modules
  */
-.moduletable {
+.moduletable,
+.moduletable_menu {
 	float: left;
 	margin: 0 0 20px 0;
 	padding: 0 25px;
@@ -29,7 +30,8 @@
 		text-align: left;
 	}
 
-	& > ul {
+	& > ul,
+	.tagssimilar > ul {
 		font-size: 1.4rem;
 		padding: 0;
 		text-align: left;
@@ -57,6 +59,8 @@
 
 			&[for="modlgn-remember"] {
 				float: right;
+				position: relative;
+				top: -3px;
 				width: auto;
 			}
 		}
@@ -82,7 +86,8 @@
 		}
 
 		#form-login-submit {
-			margin-top: -10px;
+			top: -20px;
+			position: relative;
 		}
 
 		.userdata {
@@ -101,10 +106,12 @@
 	}
 }
 
+
 /*
 	Menu
  */
-.moduletable {
+.moduletable,
+.moduletable_menu {
 	.nav {
 		& > li {
 			display: block;
@@ -163,7 +170,7 @@
  */
 
 .moduletable {
-	div[class^="tags"] {
+	.tagspopular {
 		ul {
 			margin: 20px 0 10px 0;
 			padding: 0;
@@ -220,5 +227,58 @@
 				}
 			}
 		}
+	}
+}
+
+/*
+	Who's online & Latest users
+*/
+.moduletable {
+	.whosonline li,
+	.latestusers li {
+		border: none!important;
+		display: inline-block;
+		padding: 0 5px 0 0!important;
+		
+		&:after {
+			content: ", ";
+		}
+	}
+}
+
+/*
+	Other
+*/
+.moduletable {
+	.random-image {
+		margin: 12px 0;
+	}
+	.syndicate-module {
+		display: block;
+		margin-top: 12px;
+		
+		& > img {
+			position: relative;
+			top: 2px;
+		}
+	}
+	
+	.newsfeed {
+		list-style-type: none;
+		padding-left: 0;
+		
+		& > li {
+			border-top: 1px solid @grayColor;
+			margin: 0;
+			padding: 20px 0;
+		}
+		
+		.feed-link {
+			font-size: 1.8rem;
+		}
+	}
+	
+	.bannergroup {
+		margin: 12px 0;
 	}
 }

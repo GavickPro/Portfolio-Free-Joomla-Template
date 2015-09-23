@@ -242,3 +242,12 @@ blockquote small {
   display: block;
   font-size: 1.4rem;
 }
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.pull-center {
+	text-align: center;
+}
