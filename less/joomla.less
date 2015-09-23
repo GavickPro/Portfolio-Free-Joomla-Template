@@ -370,18 +370,19 @@
  */
 #system-message-container {
 	background: @darkColor;
-	margin: -40px 0 30px 0;
-	padding: 10px 20px;
+	margin: 0;
 	position: relative;
 	text-align: center;
 }
 
 .alert-heading {
 	color: @whiteColor;
-	display: inline;
+	display: inline-block;
 	font-size: 1.4rem;
 	font-weight: bold;
 	line-height: 1.6;
+	margin: 0;
+	padding: 10px 0;
 
   	&:after {
 	  content: ":"
@@ -394,8 +395,10 @@
 
 .alert-message {
 	color: @whiteColor;
-	display: inline;
+	display: inline-block;
 	font-size: 1.4rem;
+	margin: 0;
+	padding: 10px 20px;
 }
 
 .close {
