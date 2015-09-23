@@ -36,7 +36,7 @@ $headerLayout = new JLayoutFile('gk.content.header');
 					<?php else:?>
 						<div class="login__control">
 							<div class="login__label">
-							<?php echo str_replace('hasTooltip', '', $field->label); ?>
+							<?php echo $field->label; ?>
 							<?php if (!$field->required && $field->type != 'Spacer') : ?>
 								<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL');?></span>
 							<?php endif; ?>

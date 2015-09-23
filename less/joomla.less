@@ -398,7 +398,7 @@
 	display: inline-block;
 	font-size: 1.4rem;
 	margin: 0;
-	padding: 10px 20px;
+	padding: 0 20px;
 }
 
 .close {
@@ -999,5 +999,44 @@
 		}
 	}
 }
+
+/*
+	Tooltips
+*/
+.tip-wrap { 
+	z-index: 1; 
+}
+
+.tooltip {
+	background: @whiteColor;
+	border: 1px solid @grayColor;
+	max-width: 350px;
+	min-width: 160px;
+	padding: 8px;
+	position: absolute!important;
+	opacity: 1;
+	z-index: 10;
+	
+	&-inner {
+		color: @textColor;
+		font-size: 1.2rem;
+		padding: 0 5px;
+		
+		strong {
+			color: @darkColor;
+			font-size: 1.4rem;
+			font-weight: 700;
+			line-height: 2;
+			width: 100%;
+			clear: both;
+			display: block;
+		}
+		
+		br {
+		     display: none;
+		}
+	}
+}
+
 
 // EOF

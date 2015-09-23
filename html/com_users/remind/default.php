@@ -30,7 +30,7 @@ $headerLayout = new JLayoutFile('gk.content.header');
 				<?php if($field->label !== '') : ?>
 				<div class="control-group">
 					<div class="control-label">
-						<?php echo str_replace('hasTooltip', '', $field->label); ?>
+						<?php echo $field->label; ?>
 					</div>
 					<div class="controls">
 						<?php echo $field->input; ?>

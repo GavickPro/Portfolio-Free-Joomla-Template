@@ -77,6 +77,7 @@ h6
 	font-family: '.$headerFontFamily.'; 
 }
 
+.btn,
 button,
 input[type="submit"],
 input[type="button"],
@@ -107,6 +108,7 @@ a,
 a.inverse:active,
 a.inverse:focus,
 a.inverse:hover,
+.btn.btn-primary,
 button,
 input[type="submit"],
 input[type="button"],
@@ -141,6 +143,7 @@ a[class^="icon-"]:hover:before,
 	color: '.$this->params->get('primaryColor', '#5cc1a9').'!important;
 }
 
+.btn.btn-primary,
 button,
 input[type="submit"],
 input[type="button"],
