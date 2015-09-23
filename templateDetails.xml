@@ -47,7 +47,7 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="siteTitle"  type="text" default=""
+				<field name="siteTitle"  type="text" default="Portfolio"
 					label="JGLOBAL_TITLE"
 					description="JFIELD_ALT_PAGE_TITLE_LABEL"
 					filter="string" />
