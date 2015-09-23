@@ -2,8 +2,8 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 3.4//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/3.4/template-install.dtd">
 <extension version="3.4" type="template" client="site">
 	<name>gk_portfolio</name>
-	<version>1.0.0</version>
-	<creationDate>10/08/2015</creationDate>
+	<version>1.1.0</version>
+	<creationDate>23/09/2015</creationDate>
 	<author>GavickPro</author>
 	<authorEmail>info@gavick.com</authorEmail>
 	<copyright>Copyright (C) 2015 GavickPro. All rights reserved.</copyright>

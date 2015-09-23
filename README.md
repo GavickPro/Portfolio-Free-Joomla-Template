@@ -34,6 +34,20 @@ Full list of used images:
 
 ## Changelog
 
+### 1.1.0 - September 23, 2015
+
+* Added override.css file and Custom CSS option
+* Added editor.css file for better preview of the articles in the back-end
+* Improved front-end editing for modules, articles and configuration pages
+* Improved default configuration and fixed issues with missing directories
+* Improved menu CSS code
+* Improved core modules CSS code
+* Improved core components CSS code
+* Fixed issues with menu on some mobile devices
+* Fixed issue with excerpt width
+* Fixed issues with advanced search buttons on Firefox
+
+
 ### 1.0.0 - August 10, 2015
 
 * Initial release
