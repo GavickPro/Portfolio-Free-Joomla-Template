@@ -34,7 +34,7 @@ body {
 	color: @textColor;
 	font-size: 1.4rem;
 	font-weight: 400;
-	line-height: 2;
+	line-height: 2;	
 }
 
 a {
@@ -317,13 +317,13 @@ a[class^="icon-"]:before {
 		padding: 0;
 
 		li,
-		li > a {
+		li > a,
+		li > span {
 			.transition(~"all 0.3s ease-out");
 			display: inline-block;
 			height: 32px;
 			margin: 0 1px;
 			overflow: hidden;
-
 
 			&:before {
 				color: @lightsilverColor;
@@ -338,13 +338,15 @@ a[class^="icon-"]:before {
 			}
 		}
 
-		li > a {
+		li > a,
+		li > span {
 			display: block;
 			margin: 0;
 			position: relative;
 		}
 	}
 }
+
 
 /*
 	Main navigation
@@ -362,9 +364,11 @@ a[class^="icon-"]:before {
 		    position: relative;
 		    text-align: left;
 
-		    & > a {
+		    & > a,
+		    & > span {
 		    	border: 1px solid transparent;
 			    color: @textColor;
+			    cursor: pointer;
 			    display: inline-block;
 			    font-size: 1.4rem;
 			    font-weight: 400;
@@ -389,6 +393,7 @@ a[class^="icon-"]:before {
 			z-index: 99999;
 
 			a,
+			span,
 			li {
 				line-height: 40px;
 				width: 100%;
@@ -402,7 +407,8 @@ a[class^="icon-"]:before {
 				}
 			}
 
-			a {
+			a,
+			span {
 				color: @textColor;
 				margin: 0;
 				width: 170px;

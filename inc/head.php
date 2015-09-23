@@ -136,7 +136,8 @@ a[class^="icon-"]:hover:before,
 .social__buttons_btn:active:before,
 .social__buttons_btn:focus:before,
 .social__buttons_btn:hover:before,
-.navigation > .nav li.active > a {
+.navigation > .nav li.active > a,
+.navigation > .nav li.active > span {
 	color: '.$this->params->get('primaryColor', '#5cc1a9').'!important;
 }
 
@@ -144,7 +145,8 @@ button,
 input[type="submit"],
 input[type="button"],
 input[type="reset"],
-.navigation > .nav > li.active > a {
+.navigation > .nav > li.active > a,
+.navigation > .nav > li.active > span {
 	border-color: '.$this->params->get('primaryColor', '#5cc1a9').';
 }
 

@@ -327,7 +327,10 @@ a[class^="icon-"]:before {
 .footer__social .nav li,
 .navigation .nav li > a,
 .header__topmenu .nav li > a,
-.footer__social .nav li > a {
+.footer__social .nav li > a,
+.navigation .nav li > span,
+.header__topmenu .nav li > span,
+.footer__social .nav li > span {
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
@@ -343,7 +346,10 @@ a[class^="icon-"]:before {
 .footer__social .nav li:before,
 .navigation .nav li > a:before,
 .header__topmenu .nav li > a:before,
-.footer__social .nav li > a:before {
+.footer__social .nav li > a:before,
+.navigation .nav li > span:before,
+.header__topmenu .nav li > span:before,
+.footer__social .nav li > span:before {
   color: #cccccc;
   font-family: FontAwesome;
   font-size: 2.2rem;
@@ -354,13 +360,19 @@ a[class^="icon-"]:before {
 .footer__social .nav li[class^="icon-"],
 .navigation .nav li > a[class^="icon-"],
 .header__topmenu .nav li > a[class^="icon-"],
-.footer__social .nav li > a[class^="icon-"] {
+.footer__social .nav li > a[class^="icon-"],
+.navigation .nav li > span[class^="icon-"],
+.header__topmenu .nav li > span[class^="icon-"],
+.footer__social .nav li > span[class^="icon-"] {
   color: #ffffff;
   width: 22px;
 }
 .navigation .nav li > a,
 .header__topmenu .nav li > a,
-.footer__social .nav li > a {
+.footer__social .nav li > a,
+.navigation .nav li > span,
+.header__topmenu .nav li > span,
+.footer__social .nav li > span {
   display: block;
   margin: 0;
   position: relative;
@@ -381,9 +393,11 @@ a[class^="icon-"]:before {
   position: relative;
   text-align: left;
 }
-.navigation .nav > li > a {
+.navigation .nav > li > a,
+.navigation .nav > li > span {
   border: 1px solid transparent;
   color: #777777;
+  cursor: pointer;
   display: inline-block;
   font-size: 1.4rem;
   font-weight: 400;
@@ -420,6 +434,7 @@ a[class^="icon-"]:before {
   z-index: 99999;
 }
 .navigation .nav-child a,
+.navigation .nav-child span,
 .navigation .nav-child li {
   line-height: 40px;
   width: 100%;
@@ -430,7 +445,8 @@ a[class^="icon-"]:before {
 .navigation .nav-child li:first-child {
   border-top: none;
 }
-.navigation .nav-child a {
+.navigation .nav-child a,
+.navigation .nav-child span {
   color: #777777;
   margin: 0;
   width: 170px;
@@ -1190,6 +1206,9 @@ a[class^="icon-"]:before {
 .filter-date > div > button {
   float: right;
   margin-top: 0;
+}
+.filter-date .btn {
+  padding: 0 20px!important;
 }
 .filter-branch {
   padding: 10px 0;
