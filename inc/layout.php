@@ -118,12 +118,17 @@ function gkIsPortfolioView() {
 		$input->getCmd('option', '') === 'com_content' && 
 		(
 			$input->getCmd('view', '') === 'featured' || 
-			$input->getCmd('view', '') === 'article' ||
 			(
 				$input->getCmd('view', '') === 'category' && 
 				$input->getCmd('layout', '') === 'blog'
 			)
 		);
+}
+
+function gkIsArticleView() {
+	$input = JFactory::getApplication()->input;
+
+	return $input->getCmd('option', '') === 'com_content' && $input->getCmd('view', '') === 'article';
 }
 
 function gkIsNarrowView() {
