@@ -32,6 +32,8 @@
 		<position>breadcrumb</position>
 		<position>top</position>
 		<position>bottom</position>
+		<position>content_top</position>
+		<position>content_bottom</position>
 		<position>copyrights</position>
 		<position>debug</position>
 		<!-- menus -->
