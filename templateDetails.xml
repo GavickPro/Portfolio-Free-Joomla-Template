@@ -307,6 +307,17 @@
 			</fieldset>
 
 			<fieldset name="advanced">
+				<field name="showSocialIcons"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_GK_PORTFOLIO_SHOW_SOCIAL_ICONS_LABEL"
+					description="TPL_GK_PORTFOLIO_SHOW_SOCIAL_ICONS_DESC"
+				>
+					<option value="1">TPL_GK_PORTFOLIO_ENABLED</option>
+					<option value="0">TPL_GK_PORTFOLIO_DISABLED</option>
+				</field>
+				
 				<field name="itemHeight"  type="text" default="418"
 					label="TPL_GK_PORTFOLIO_ITEM_HEIGHT_LABEL"
 					description="TPL_GK_PORTFOLIO_ITEM_HEIGHT_DESC"
@@ -342,14 +353,6 @@
 					<option value="1">TPL_GK_PORTFOLIO_ENABLED</option>
 					<option value="0">TPL_GK_PORTFOLIO_DISABLED</option>
 				</field>
-				
-				<field name="customCSS"
-					type="textarea"
-					filter="raw"
-					rows="10"
-					label="TPL_GK_PORTFOLIO_CUSTOM_CSS_LABEL"
-					description="TPL_GK_PORTFOLIO_CUSTOM_CSS_DESC"
-				></field>
 			</fieldset>
 		</fields>
 	</config>

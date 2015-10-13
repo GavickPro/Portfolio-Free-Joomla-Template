@@ -80,6 +80,12 @@ JHtml::_('behavior.caption');
 				<?php echo $this->loadTemplate('links'); ?>
 			<?php endif; ?>
 
+			<?php 
+				$app = JFactory::getApplication();
+				$templateParams = $app->getTemplate(true)->params;
+				
+				if($templateParams->get('showSocialIcons', 0) == 1) :
+			?>
 			<div class="social__buttons">
 				<span class="social__buttons_label"><?php echo JText::_('TPL_GK_PORTFOLIO_SHARE'); ?></span>
 				
@@ -95,6 +101,7 @@ JHtml::_('behavior.caption');
 		            <span class="social__buttons--hidden"><?php echo JText::_('TPL_GK_PORTFOLIO_GPLUS'); ?></span>
 		        </a>
 			</div>
+			<?php endif; ?>
 
 			<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
 				<?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
