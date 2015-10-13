@@ -137,4 +137,15 @@ function gkIsNarrowView() {
 	return $input->getCmd('option', '') === 'com_users' && $input->getCmd('view', '') === 'login';
 }
 
+function gkModuleNumber($tpl, $count, $default = 2) {
+	$count = intval($tpl->countModules($count));
+	$max = intval($tpl->params->get($count . 'Cols', $default));
+	
+	if($count > $max) {
+		return $max;
+	}
+	
+	return $count;
+}
+
 // EOF

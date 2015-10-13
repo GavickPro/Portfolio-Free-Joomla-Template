@@ -69,7 +69,7 @@ require_once('inc/layout.php');
 			<?php endif; ?>
 			
 			<?php if($this->countModules('top')) : ?>
-			<div class="site__top clearfix subpage" role="complementary" data-mod-num="<?php echo $this->params->get('topCols', 2); ?>">
+			<div class="site__top clearfix subpage" role="complementary" data-mod-num="<?php echo gkModuleNumber($this, 'top'); ?>">
 				<jdoc:include type="modules" name="top" style="xhtml" />
 			</div><!-- .site__top -->
 			<?php endif; ?>
@@ -108,7 +108,7 @@ require_once('inc/layout.php');
 
 	<footer class="footer">
 		<?php if($this->countModules('bottom')) : ?>
-		<div class="footer__bottom" role="complementary" data-mod-num="<?php echo $this->params->get('bottomCols', 2); ?>">
+		<div class="footer__bottom" role="complementary" data-mod-num="<?php echo gkModuleNumber($this, 'bottom'); ?>">
 			<jdoc:include type="modules" name="bottom" style="xhtml" />
 		</div><!-- .footer__bottom -->
 		<?php endif; ?>
