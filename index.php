@@ -75,26 +75,26 @@ require_once('inc/layout.php');
 			<?php endif; ?>
 
 			<div class="site__content" role="main">
-				<?php if(!gkIsPortfolioView() && !gkIsNarrowView() && !gkIsArticleView()) : ?>
-				<div class="subpage component">
-				<?php endif; ?>
-
 				<?php if($this->countModules('content_top') && !gkIsPortfolioView()) : ?>
 				<div class="component__top subpage clearfix" role="complementary">
 					<jdoc:include type="modules" name="content_top" style="xhtml" />
 				</div><!-- .component__top -->
 				<?php endif; ?>
 				
+				<?php if(!gkIsPortfolioView() && !gkIsNarrowView() && !gkIsArticleView()) : ?>
+				<div class="subpage component">
+				<?php endif; ?>
+				
 				<jdoc:include type="component" />
+				
+				<?php if(!gkIsPortfolioView() && !gkIsNarrowView()) : ?>
+				</div><!-- subpage component -->
+				<?php endif; ?>
 				
 				<?php if($this->countModules('content_bottom') && !gkIsPortfolioView()) : ?>
 				<div class="component__bottom subpage clearfix" role="complementary">
 					<jdoc:include type="modules" name="content_bottom" style="xhtml" />
 				</div><!-- .component__bottom -->
-				<?php endif; ?>
-
-				<?php if(!gkIsPortfolioView() && !gkIsNarrowView()) : ?>
-				</div><!-- subpage component -->
 				<?php endif; ?>
 			</div><!-- .site__content -->
 		</div><!-- .site__main -->
