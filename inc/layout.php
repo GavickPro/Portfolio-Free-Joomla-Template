@@ -138,14 +138,14 @@ function gkIsNarrowView() {
 }
 
 function gkModuleNumber($tpl, $count, $default = 2) {
-	$count = intval($tpl->countModules($count));
+	$real_count = intval($tpl->countModules($count));
 	$max = intval($tpl->params->get($count . 'Cols', $default));
 	
-	if($count > $max) {
+	if($real_count >= $max) {
 		return $max;
 	}
 	
-	return $count;
+	return $real_count;
 }
 
 // EOF
