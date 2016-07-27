@@ -2,8 +2,8 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 3.4//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/3.4/template-install.dtd">
 <extension version="3.4" type="template" client="site">
 	<name>gk_portfolio</name>
-	<version>1.1.0</version>
-	<creationDate>23/09/2015</creationDate>
+	<version>1.1.1</version>
+	<creationDate>15/10/2015</creationDate>
 	<author>GavickPro</author>
 	<authorEmail>info@gavick.com</authorEmail>
 	<copyright>Copyright (C) 2015 GavickPro. All rights reserved.</copyright>
@@ -32,6 +32,8 @@
 		<position>breadcrumb</position>
 		<position>top</position>
 		<position>bottom</position>
+		<position>content_top</position>
+		<position>content_bottom</position>
 		<position>copyrights</position>
 		<position>debug</position>
 		<!-- menus -->
@@ -305,6 +307,17 @@
 			</fieldset>
 
 			<fieldset name="advanced">
+				<field name="showSocialIcons"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_GK_PORTFOLIO_SHOW_SOCIAL_ICONS_LABEL"
+					description="TPL_GK_PORTFOLIO_SHOW_SOCIAL_ICONS_DESC"
+				>
+					<option value="1">TPL_GK_PORTFOLIO_ENABLED</option>
+					<option value="0">TPL_GK_PORTFOLIO_DISABLED</option>
+				</field>
+				
 				<field name="itemHeight"  type="text" default="418"
 					label="TPL_GK_PORTFOLIO_ITEM_HEIGHT_LABEL"
 					description="TPL_GK_PORTFOLIO_ITEM_HEIGHT_DESC"

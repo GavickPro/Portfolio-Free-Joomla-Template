@@ -118,7 +118,6 @@ function gkIsPortfolioView() {
 		$input->getCmd('option', '') === 'com_content' && 
 		(
 			$input->getCmd('view', '') === 'featured' || 
-			$input->getCmd('view', '') === 'article' ||
 			(
 				$input->getCmd('view', '') === 'category' && 
 				$input->getCmd('layout', '') === 'blog'
@@ -126,10 +125,27 @@ function gkIsPortfolioView() {
 		);
 }
 
+function gkIsArticleView() {
+	$input = JFactory::getApplication()->input;
+
+	return $input->getCmd('option', '') === 'com_content' && $input->getCmd('view', '') === 'article';
+}
+
 function gkIsNarrowView() {
 	$input = JFactory::getApplication()->input;
 	
 	return $input->getCmd('option', '') === 'com_users' && $input->getCmd('view', '') === 'login';
+}
+
+function gkModuleNumber($tpl, $count, $default = 2) {
+	$real_count = intval($tpl->countModules($count));
+	$max = intval($tpl->params->get($count . 'Cols', $default));
+	
+	if($real_count >= $max) {
+		return $max;
+	}
+	
+	return $real_count;
 }
 
 // EOF

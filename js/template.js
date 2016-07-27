@@ -263,18 +263,32 @@ function portfolio_is_touch_device() {
 			});
 		}
 		
-		$('.nav .parent').children('a').on('touchend', function(e) {
+		$('.nav .parent').children('a, span').on('touchend', function(e) {
 			e.stopPropagation();
 			e.preventDefault();
 			
-			if(!$(this).attr('data-time')) {
+			if(!$(this).attr('data-time') || (parseInt($(this).attr('data-time'), 10) + 500.0) < new Date().getTime()) {
 				$(this).parent().addClass('opened');
+				var other = $(this).parent().parent().find('li');
+				
+				for(var i = 0; i < other.length; i++) {
+					var other_class = $(other[i]).attr('class').split(' ')[0];
+					var current_parent_class = $(this).parent().attr('class').split(' ')[0];
+					
+					if(other_class !== current_parent_class && !$(other[i]).parent('.' + current_parent_class).length) {
+						$(other[i]).removeClass('opened');
+					}
+				}
+				
 				$(this).attr('data-time', new Date().getTime());
 				return true;
 			}
 			
 			if($(this).attr('data-time') && (parseInt($(this).attr('data-time'), 10) + 500.0) > new Date().getTime()) {
-				window.location.href = $(this).attr('href');
+				if($(this).attr('href')) {
+					window.location.href = $(this).attr('href');
+				}
+				
 				return true;
 			}
 			

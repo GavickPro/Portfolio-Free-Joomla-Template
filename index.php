@@ -69,20 +69,32 @@ require_once('inc/layout.php');
 			<?php endif; ?>
 			
 			<?php if($this->countModules('top')) : ?>
-			<div class="site__top" role="complementary" data-mod-num="<?php echo $this->params->get('topCols', 2); ?>">
+			<div class="site__top clearfix subpage" role="complementary" data-mod-num="<?php echo gkModuleNumber($this, 'top'); ?>">
 				<jdoc:include type="modules" name="top" style="xhtml" />
 			</div><!-- .site__top -->
 			<?php endif; ?>
 
 			<div class="site__content" role="main">
-				<?php if(!gkIsPortfolioView() && !gkIsNarrowView()) : ?>
+				<?php if($this->countModules('content_top') && !gkIsPortfolioView()) : ?>
+				<div class="component__top subpage clearfix" role="complementary">
+					<jdoc:include type="modules" name="content_top" style="xhtml" />
+				</div><!-- .component__top -->
+				<?php endif; ?>
+				
+				<?php if(!gkIsPortfolioView() && !gkIsNarrowView() && !gkIsArticleView()) : ?>
 				<div class="subpage component">
 				<?php endif; ?>
-
+				
 				<jdoc:include type="component" />
-
+				
 				<?php if(!gkIsPortfolioView() && !gkIsNarrowView()) : ?>
 				</div><!-- subpage component -->
+				<?php endif; ?>
+				
+				<?php if($this->countModules('content_bottom') && !gkIsPortfolioView()) : ?>
+				<div class="component__bottom subpage clearfix" role="complementary">
+					<jdoc:include type="modules" name="content_bottom" style="xhtml" />
+				</div><!-- .component__bottom -->
 				<?php endif; ?>
 			</div><!-- .site__content -->
 		</div><!-- .site__main -->
@@ -96,7 +108,7 @@ require_once('inc/layout.php');
 
 	<footer class="footer">
 		<?php if($this->countModules('bottom')) : ?>
-		<div class="footer__bottom" role="complementary" data-mod-num="<?php echo $this->params->get('bottomCols', 2); ?>">
+		<div class="footer__bottom" role="complementary" data-mod-num="<?php echo gkModuleNumber($this, 'bottom'); ?>">
 			<jdoc:include type="modules" name="bottom" style="xhtml" />
 		</div><!-- .footer__bottom -->
 		<?php endif; ?>
